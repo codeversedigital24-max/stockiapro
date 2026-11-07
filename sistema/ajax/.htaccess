@@ -1,0 +1,7 @@
+# Endpoint interno del login.
+# Solo acepta POST; una visita directa por GET/PUT/OPTIONS devuelve 403.
+Options -Indexes
+
+<LimitExcept POST>
+    Require all denied
+</LimitExcept>

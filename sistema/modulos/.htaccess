@@ -1,0 +1,7 @@
+# Archivos PHP internos del módulo: no accesibles por URL.
+# El JavaScript sí debe servirse al navegador.
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes

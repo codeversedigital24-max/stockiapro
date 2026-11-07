@@ -1,0 +1,6 @@
+# Subidas públicas: nunca ejecutar scripts desde aquí.
+Options -Indexes
+
+<FilesMatch "\.(php|phtml|phar|php3|php4|php5|php7|php8|cgi|pl|py|sh)$">
+    Require all denied
+</FilesMatch>

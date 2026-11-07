@@ -1,0 +1,14 @@
+# StockiaPro · configuración de Apache
+Options -Indexes
+DirectoryIndex login.php
+
+# No exponer archivos sensibles
+<FilesMatch "\.(sql|md|log|ini|env|bak|old|sh)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "same-origin"
+</IfModule>
